@@ -38,7 +38,7 @@ joi.preload = function joi_preload (plugin) {
           delete options.legacy
 
           actmeta.validate = function joi_validate (msg, done) {
-            Joi.validate(msg, schema, options, done)
+            Joi.validate(msg, schema, options.joiOptions, done)
           }
         }
 
